@@ -1,0 +1,19 @@
+.ttBreadcrumb > ul {
+    color: white;
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+    font-family: inherit;
+    font-weight: bold ;
+    font-size: 1.2em;
+}
+
+.ttRemovePadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.ttNavBar {
+    min-height: 0px !important;
+    border-bottom: solid yellow;
+}

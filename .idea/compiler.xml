@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for ttproject" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ttproject" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-core" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for sips-cn-provider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-cn-contract" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-cn-contract" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-cn-provider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-cn-provider" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-cn-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-cn-core" />
+      </profile>
+      <profile default="false" name="Annotation profile for sips-pm-aurore" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pm-common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pm-common" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pm-model" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pm-model" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pm-aurore" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pm-aurore" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="sips-cn-config" />
+        <module name="sips-cn-webdeploy" />
+      </profile>
+      <profile default="false" name="Annotation profile for sips-pe-contract" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pe-contract" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pe-contract" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pe-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pe-core" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pe-provider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-pe-provider" />
+      </profile>
+      <profile default="false" name="Annotation profile for barachuda" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="barachuda" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pp-config" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pp-simu-config" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pp-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pp-simu-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-cn-config" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="tt-cn-config" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-cn-webdeploy" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for tt-pp-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="barachuda" target="1.7" />
+      <module name="custompages" target="1.5" />
+      <module name="projects" target="1.7" />
+      <module name="sips-cn-config" target="1.5" />
+      <module name="sips-cn-provider" target="1.7" />
+      <module name="sips-cn-webdeploy" target="1.5" />
+      <module name="sips-pe-contract" target="1.6" />
+      <module name="sips-pe-core" target="1.5" />
+      <module name="sips-pe-provider" target="1.5" />
+      <module name="sips-pm-aurore" target="1.7" />
+      <module name="tt" target="1.7" />
+      <module name="tt-cn" target="1.7" />
+      <module name="tt-cn-config" target="1.7" />
+      <module name="tt-cn-contract" target="1.7" />
+      <module name="tt-cn-core" target="1.7" />
+      <module name="tt-cn-provider" target="1.7" />
+      <module name="tt-cn-webdeploy" target="1.7" />
+      <module name="tt-core" target="1.7" />
+      <module name="tt-delivery-conf" target="1.7" />
+      <module name="tt-pe" target="1.7" />
+      <module name="tt-pe-contract" target="1.6" />
+      <module name="tt-pe-core" target="1.7" />
+      <module name="tt-pe-provider" target="1.7" />
+      <module name="tt-pimp" target="1.7" />
+      <module name="tt-pm" target="1.7" />
+      <module name="tt-pm-aurore" target="1.7" />
+      <module name="tt-pm-common" target="1.7" />
+      <module name="tt-pm-model" target="1.7" />
+      <module name="tt-pp" target="1.7" />
+      <module name="tt-pp-config" target="1.7" />
+      <module name="tt-pp-core" target="1.6" />
+      <module name="tt-pp-simu-config" target="1.7" />
+      <module name="tt-pp-simu-web" target="1.7" />
+      <module name="tt-pp-web" target="1.7" />
+      <module name="tt-sims" target="1.7" />
+      <module name="tt-web" target="1.7" />
+      <module name="ttproject" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tt-pimp/tt-pimp-barachuda/barachuda.iml" filepath="$PROJECT_DIR$/tt-pimp/tt-pimp-barachuda/barachuda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projects.iml" filepath="$PROJECT_DIR$/projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn-config/tt-cn-config.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn-config/tt-cn-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn-contract/tt-cn-contract.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn-contract/tt-cn-contract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn-core/tt-cn-core.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn-core/tt-cn-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn-provider/tt-cn-provider.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn-provider/tt-cn-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-cn/tt-cn-webdeploy/tt-cn-webdeploy.iml" filepath="$PROJECT_DIR$/tt-cn/tt-cn-webdeploy/tt-cn-webdeploy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-sims/tt-core/tt-core.iml" filepath="$PROJECT_DIR$/tt-sims/tt-core/tt-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-delivery-conf/tt-delivery-conf.iml" filepath="$PROJECT_DIR$/tt-delivery-conf/tt-delivery-conf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pe/tt-pe.iml" filepath="$PROJECT_DIR$/tt-pe/tt-pe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pe/tt-pe-contract/tt-pe-contract.iml" filepath="$PROJECT_DIR$/tt-pe/tt-pe-contract/tt-pe-contract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pe/tt-pe-core/tt-pe-core.iml" filepath="$PROJECT_DIR$/tt-pe/tt-pe-core/tt-pe-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pe/tt-pe-provider/tt-pe-provider.iml" filepath="$PROJECT_DIR$/tt-pe/tt-pe-provider/tt-pe-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pimp/tt-pimp.iml" filepath="$PROJECT_DIR$/tt-pimp/tt-pimp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pm/tt-pm.iml" filepath="$PROJECT_DIR$/tt-pm/tt-pm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pm/tt-pm-aurore/tt-pm-aurore.iml" filepath="$PROJECT_DIR$/tt-pm/tt-pm-aurore/tt-pm-aurore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pm/tt-pm-common/tt-pm-common.iml" filepath="$PROJECT_DIR$/tt-pm/tt-pm-common/tt-pm-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pm-model/tt-pm-model.iml" filepath="$PROJECT_DIR$/tt-pm-model/tt-pm-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp-config/tt-pp-config.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp-config/tt-pp-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp-core/tt-pp-core.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp-core/tt-pp-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp-simu-config/tt-pp-simu-config.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp-simu-config/tt-pp-simu-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp-simu-web/tt-pp-simu-web.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp-simu-web/tt-pp-simu-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-pp/tt-pp-web/tt-pp-web.iml" filepath="$PROJECT_DIR$/tt-pp/tt-pp-web/tt-pp-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-sims/tt-sims.iml" filepath="$PROJECT_DIR$/tt-sims/tt-sims.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tt-sims/tt-web/tt-web.iml" filepath="$PROJECT_DIR$/tt-sims/tt-web/tt-web.iml" />
+    </modules>
+  </component>
+</project>

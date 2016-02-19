@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tt.pm</groupId>
+        <artifactId>tt-pm</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+
+    <artifactId>tt-pm-common</artifactId>
+
+    <packaging>jar</packaging>
+    <name>TT PM Common</name>
+
+    <description>This API defines interfaces by payment means categories (provider, card, direct debit...) and common
+        classes used by sub payment means project such as Netbanking, Sdd, paypal and so on
+    </description>
+
+    <properties>
+        <pit.report.skip>false</pit.report.skip>
+    </properties>
+
+    <dependencies>
+
+        <!-- Model-->
+        <dependency>
+            <groupId>com.tt.pm</groupId>
+            <artifactId>tt-pm-model</artifactId>
+        </dependency>
+
+        <!-- JODA Time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+
+        <!-- Reflection API -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <!-- TEST -->
+        <dependency>
+            <artifactId>junit</artifactId>
+            <groupId>junit</groupId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert-core</artifactId>
+            <version>2.0M10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

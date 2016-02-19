@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tt-cn-webdeploy:war">
+    <output-path>$PROJECT_DIR$/tt-cn/tt-cn-webdeploy/target</output-path>
+    <root id="archive" name="tt-cn-webdeploy-1.0-SNAPSHOT.war" />
+  </artifact>
+</component>

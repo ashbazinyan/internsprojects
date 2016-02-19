@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.projects.parent</groupId>
+		<artifactId>porjects-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.tt.pe</groupId>
+	<artifactId>tt-pe</artifactId>
+	<packaging>pom</packaging>
+	<name>TT Payment Engine</name>
+	<version>1.0-SNAPSHOT</version>
+
+
+	<modules>
+
+		<module>tt-pe-core</module>
+		<module>tt-pe-contract</module>
+		<module>tt-pe-provider</module>
+
+	</modules>
+
+	<properties>
+		<apache-commons-lang-version>3.1</apache-commons-lang-version>
+		<cxf-bundle-version>2.2.7</cxf-bundle-version>
+		<jaxb-api-version>2.1</jaxb-api-version>
+		<joda-version>2.1</joda-version>
+		<junit-version>4.11</junit-version>
+		<reflection-version>0.9.9</reflection-version>
+		<ehcache-version>2.6.11</ehcache-version>
+		<guava-version>18.0</guava-version>
+		<xa-rl.version>2.2.2</xa-rl.version>
+		<tomee-dependencies>1.3.0</tomee-dependencies>
+
+		<!-- java version configuration -->
+		<java.version>1.7</java.version>
+
+		<!-- plugin configuration -->
+		<plugin-pitest-skip>false</plugin-pitest-skip>
+
+
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- pe modules -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>tt-pe-contract</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>tt-pe-provider</artifactId>
+				<version>${project.version}</version>
+				<scope>compile</scope>
+			</dependency>
+
+                <dependency>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>tt-pe-core</artifactId>
+                    <version>${project.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+
+
+			<dependency>
+				<artifactId>tt-pm-common</artifactId>
+				<groupId>com.tt.pm</groupId>
+				<version>${pm-version}</version>
+				<scope>compile</scope>
+				<type>jar</type>
+			</dependency>
+
+			<dependency>
+				<groupId>com.tt.pm</groupId>
+				<artifactId>tt-pm-aurore</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<scope>compile</scope>
+				<type>jar</type>
+			</dependency>
+
+			<!-- Technical depedencies -->
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>${ehcache-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.jsefa</groupId>
+				<artifactId>jsefa</artifactId>
+				<version>${jsefa-version}</version>
+				<scope>compile</scope>
+				<type>jar</type>
+			</dependency>
+
+			<dependency>
+				<groupId>org.reflections</groupId>
+				<artifactId>reflections</artifactId>
+				<version>${reflection-version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava-version}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>${jaxb-api-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-bundle</artifactId>
+				<version>${cxf-bundle-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${apache-commons-lang-version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda-version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>

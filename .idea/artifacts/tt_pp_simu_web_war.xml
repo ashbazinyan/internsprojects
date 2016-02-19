@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tt-pp-simu-web:war">
+    <output-path>$PROJECT_DIR$/tt-pp/tt-pp-simu-web/target</output-path>
+    <root id="archive" name="tt-pp-simu-web-1.0-SNAPSHOT.war" />
+  </artifact>
+</component>

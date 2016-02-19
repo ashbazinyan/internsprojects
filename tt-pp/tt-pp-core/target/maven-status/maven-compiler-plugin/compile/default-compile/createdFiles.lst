@@ -1,0 +1,13 @@
+com/tt/pp/core/model/process/store/workers/User.class
+com/tt/pp/core/model/process/store/productmeans/general/ProductAddInput.class
+com/tt/pp/core/managers/CardManager.class
+com/tt/pp/core/managers/StoreManager.class
+com/tt/pp/core/model/process/store/productmeans/general/ProductAddOutput.class
+com/tt/pp/core/resourcelocator/ResourceLocator.class
+com/tt/pp/core/model/process/store/productmeans/general/IProductOutput.class
+com/tt/pp/core/model/process/common/SessionData.class
+com/tt/pp/core/managers/NotificationManager.class
+com/tt/pp/core/resourcelocator/ResourceLocatorUnit.class
+com/tt/pp/core/model/process/store/workers/seller/Seller.class
+com/tt/pp/core/model/process/store/productmeans/general/Product.class
+com/tt/pp/core/model/process/store/management/relation/Role.class

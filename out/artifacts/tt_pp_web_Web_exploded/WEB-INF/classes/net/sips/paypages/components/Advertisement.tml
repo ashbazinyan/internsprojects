@@ -1,0 +1,25 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+             xmlns:p="tapestry:parameter">
+    <div class="col-sm-3">
+        <nav class="nav-sidebar">
+            <div class="sidebar-bg">
+                <div class="title">TODAY'S</div>
+                <div class="top-lessons">TOP LESSONS</div>
+                <div class="sidebar-content">
+                    Great Music Lessons
+                    UP TO 50% OFF
+
+                    Buy Lessons
+                </div>
+                <div class="btn btn-default btnset">Buy Lessons</div>
+            </div>
+        </nav>
+        <div class="sidebar-bg">
+            <div class="content-sidebar">MUSIC LESSON
+                FROM POPULAR
+                SINGERS
+            </div>
+            <div class="btn btn-default btnset2">Buy Lessons</div>
+        </div>
+    </div>
+    </t:container>

@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tt-web:war">
+    <output-path>$PROJECT_DIR$/tt-sims/tt-web/target</output-path>
+    <root id="archive" name="tt-web-1.0-SNAPSHOT.war" />
+  </artifact>
+</component>

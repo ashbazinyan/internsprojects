@@ -1,0 +1,133 @@
+<html t:type="layout" title="Welcome to iMusic"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<head>
+    <meta charset="utf-8"/>
+    <title>imusic</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body>
+
+<div class="container">
+    <p class="settings">Today's Feature Music lesson</p>
+    <div class="blank_space settings">
+    </div>
+
+    <div class="row musiclesson">
+        <div class="six-col">
+            <div class="col-md-6">
+                <div class="col-md-9 margin music-lesson">
+                    <img src="images/images/3.png" alt="imusic" title="imusic" class="img-responsive mike"/>
+                </div>
+                <div class="col-md-3 margin ">
+                    <img src="images/images/thumb1.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/thumb2.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/thumb3.png" alt="imusic" title="imusic" class="img-responsive"/>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-9 ">
+                        <h3>OUR BAND</h3>
+                        <p>Masagni dolores eoquie voluptate msequi neisciunt.nique porrisquam estqui dolorem ipsumquia dollar sitamet consectet adipisci.Masagni dolores eoquie voluptate msequi neisciunt.nique porrisquam estqui dolorem ipsumquia dollar sitamet consectet adipisci. </p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>17 Lesson</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>$5-up</p>
+                    </div>
+                    <a  class="listen" href="#">Listen Now</a>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-9 margin music-lesson">
+                    <img src="images/images/nordstage.png" alt="imusic" title="imusic" class="img-responsive mike"/></div>
+                <div class="col-md-3 margin">
+                    <img src="images/images/thumb1.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/thumb2.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/thumb3.png" alt="imusic" title="imusic" class="img-responsive"/>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <h3>Music Lessons</h3>
+                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui dolorem ipsumquia dolor sitamet
+                            consectet adipisci. unumquam eius.Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui
+                            dolorem ipsumquia dolor sitamet consectet adipisci. unumquam eius.</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>17 Lesson</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>$5-up</p>
+                    </div>
+                    <a  class="listen" href="#">Listen Now</a>
+                </div>
+
+            </div>
+
+        </div><!--row end here-->
+        <div class="row musiclesson">
+            <div class="col-md-6 ">
+                <div class="col-md-9 margin music-lesson">
+                    <img src="images/images/47.PNG" alt="imusic" title="imusic" class="img-responsive mike"/>
+                </div>
+                <div class="col-md-3 margin">
+                    <img src="images/images/thumb1.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/44.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/45.png" alt="imusic" title="imusic" class="img-responsive"/>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <h3>Live Classes</h3>
+                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui dolorem ipsumquia dolor sitamet
+                            consectet adipisci. unumquam eius.Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui
+                            dolorem ipsumquia dolor sitamet consectet adipisci. unumquam eius.</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>17 Lesson</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>$5-up</p>
+                    </div>
+                    <a  class="listen" href="#">Listen Now</a>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-9 margin music-lesson ">
+                    <img src="images/images/banner2.jpg" alt="imusic" title="imusic" class="img-responsive mike"/></div>
+                <div class="col-md-3 margin">
+                    <img src="images/images/49.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/48.png" alt="imusic" title="imusic" class="img-responsive"/>
+                    <img src="images/images/thumb11.jpg" alt="imusic" title="imusic" class="img-responsive"/>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <h3>Violin Leassons</h3>
+                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui dolorem ipsumquia dolor sitamet
+                            consectet adipisci. unumquam eius.Masagni dolores eoquie voluptate msequi nesciunt. Nique porrisquam estqui
+                            dolorem ipsumquia dolor sitamet consectet adipisci. unumquam eius.</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>17 Lesson</p>
+                    </div>
+                    <div class="col-md-3 brand">
+                        <p>$5-up</p>
+                    </div>
+                    <a  class="listen" href="#">Listen Now</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.projects.parent</groupId>
+        <artifactId>porjects-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+
+    </parent>
+
+
+
+    <artifactId>tt-sims</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <groupId>com.tt.sims</groupId>
+    <packaging>pom</packaging>
+    <name>TT Parent</name>
+    <description>Parent pom for the TT project</description>
+
+
+    <modules>
+        <module>tt-core</module>
+        <module>tt-web</module>
+    </modules>
+
+
+    <properties>
+
+
+        <java.version>1.7</java.version>
+
+        <jaxb.version>2.0</jaxb.version>
+         <cc-version>2.7.1</cc-version>
+        <scy-version>1.1.0</scy-version>
+     <cn-version>1.0-SNAPSHOT</cn-version>
+
+        <trs-version>1.2.3</trs-version><!-- WARN ! compilation problem with new version -->
+        <legacy-version>1.6.0-SNAPSHOT</legacy-version>
+        <slf4j-version>1.5.8</slf4j-version>
+        <ct-log4j-version>2.0.0</ct-log4j-version>
+        <dbrd-version>1.9.0</dbrd-version>
+        <jackson.version>1.9.10</jackson.version>
+        <apipayment-version>617</apipayment-version>
+        <cars-version>2.2.0</cars-version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.6</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.14</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-version}</version>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+
+            <!--simple encoder and decoders for various formats such as Base64 and Hexadecimal-->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.4</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- JSTL -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.1.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>taglibs</groupId>
+                <artifactId>standard</artifactId>
+                <version>1.1.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+          <dependency>
+                <groupId>com.tt.cn</groupId>
+                <artifactId>tt-cn-contract</artifactId>
+                <version>${cn-version}</version>
+            </dependency>
+
+
+
+            <!--Jaxen is a universal Java XPath engine.-->
+            <dependency>
+                <groupId>jaxen</groupId>
+                <artifactId>jaxen</artifactId>
+                <version>1.1.1</version>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>dom4j</groupId>
+                        <artifactId>dom4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>xml-apis</groupId>
+                        <artifactId>xml-apis</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>xom</groupId>
+                        <artifactId>xom</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>xerces</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http</artifactId>
+                <version>2.2.10</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                <version>2.2.10</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>3.0.6.RELEASE</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

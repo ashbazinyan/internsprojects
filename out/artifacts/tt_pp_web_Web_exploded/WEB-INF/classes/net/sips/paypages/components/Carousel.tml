@@ -1,0 +1,9 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+             xmlns:p="tapestry:parameter">
+<div class="col-lg-9 asd">
+    <div class="topbanner">
+        <img src="images/images/1.png" alt="imusic" title="imusic" class="img-responsive"/></div>
+
+<!--    <br/>-->
+</div>
+    </t:container>

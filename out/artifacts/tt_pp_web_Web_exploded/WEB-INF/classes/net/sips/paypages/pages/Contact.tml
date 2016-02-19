@@ -1,0 +1,7 @@
+<html t:type="layout" title="Contact net.sips.paypages"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Contact net.sips.paypages ...</p>
+
+</html>

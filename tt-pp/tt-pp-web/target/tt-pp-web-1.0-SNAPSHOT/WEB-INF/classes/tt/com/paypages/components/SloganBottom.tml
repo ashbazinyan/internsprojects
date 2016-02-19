@@ -1,0 +1,6 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+             xmlns:p="tapestry:parameter">
+<div class="row blank_space logo-set get-inspired">
+    <div class="col-lg-8 col-lg-offset-4"><p class="explore">Get inspired! Explore all of our World wide Music Collections</p></div>
+</div>
+    </t:container>

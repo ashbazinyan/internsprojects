@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sun-ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD GlassFish Application Server 3.0 EJB 3.1//EN" "http://www.sun.com/software/appserver/dtds/sun-ejb-jar_3_1-0.dtd">
+<sun-ejb-jar>
+  <enterprise-beans>
+    <ejb>
+      <ejb-name>com.tt.contract.payment.PaymentService</ejb-name>
+      <webservice-endpoint>
+        <port-component-name>cnv2PaymentServiceImplPort</port-component-name>
+        <endpoint-address-uri>services/paymentInit</endpoint-address-uri>
+      </webservice-endpoint>
+    </ejb>
+   </enterprise-beans>
+</sun-ejb-jar>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOT USED -->
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+  version="1.0">
+
+  <persistence-unit-metadata>
+    <persistence-unit-defaults>
+      <access>FIELD</access>
+    </persistence-unit-defaults>
+  </persistence-unit-metadata>
+
+  <!--<entity class="net.atos.sips.mm.core.MerchantPoiAcquirerContract">-->
+  <!--<named-query name="net.atos.sips.mm.core.MerchantPoiAcquirerContract.findByMPoiAndAcqCnt">-->
+    <!--<query><![CDATA[SELECT m FROM MerchantPoiAcquirerContract m WHERE m.merchantPoi.merchantPoiId = :merchantPoiId AND m.acquirerContract.acquirerContractId = :acquirerContractId]]></query>-->
+    <!--<hint name="org.hibernate.cacheable" value="true"/>-->
+    <!--<hint name="org.hibernate.timeout" value = "200"/>-->
+  <!--</named-query>-->
+<!--</entity>-->
+</entity-mappings>      

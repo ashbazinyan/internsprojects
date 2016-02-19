@@ -1,0 +1,233 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>tt-pp-web</artifactId>
+    <packaging>war</packaging>
+    <name>TT Front Tier</name>
+    <parent>
+        <groupId>com.tt.pp</groupId>
+        <artifactId>tt-pp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+       <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-core</artifactId>
+            <version>${tapestry-release-version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Include the Log4j implementation for the SLF4J logging framework -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j-release-version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-webresources</artifactId>
+            <version>${tapestry-release-version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>4.2.12.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+
+ <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng-release-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-test</artifactId>
+            <version>${tapestry-release-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api-release-version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Provide dependency to the Tapestry javadoc taglet which replaces the Maven component report -->
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-javadoc</artifactId>
+            <version>${tapestry-release-version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.tt.cn</groupId>
+            <artifactId>tt-cn-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tt.pe</groupId>
+            <artifactId>tt-pe-contract</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.wurfl</groupId>
+            <artifactId>wurfl</artifactId>
+        </dependency>
+        <!-- PDF library -->
+
+
+        <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>tt-pp-core</artifactId>
+        <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.7.2</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <tapestry.execution-mode>Qa</tapestry.execution-mode>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <reporting/>
+    <profiles>
+
+
+        <profile>
+            <id>local</id>
+
+            <properties>
+                <deployment.context>tt-pp-web</deployment.context>
+            </properties>
+
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+
+            <dependencies>
+
+                <dependency>
+                    <groupId>org.apache.openejb</groupId>
+                    <artifactId>openejb-core-hibernate</artifactId>
+                    <type>pom</type>
+                    <scope>provided</scope>
+                </dependency>
+
+                <!-- Slf4j -->
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </dependency>
+
+
+
+                <dependency>
+                    <groupId>com.tt.pp</groupId>
+                    <artifactId>tt-pp-config</artifactId>
+                    <version>${project.version}</version>
+                    <scope>runtime</scope>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.tt.cn</groupId>
+                    <artifactId>tt-cn-contract</artifactId>
+                    <version>${tt-cn-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>asm</groupId>
+                    <artifactId>asm</artifactId>
+                    <version>2.2.3</version>
+                </dependency>
+                <dependency>
+                    <groupId>jstl</groupId>
+                    <artifactId>jstl</artifactId>
+                    <version>1.2</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-asm</artifactId>
+                    <version>${spring-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                    <version>${spring-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                    <version>${spring-version}</version>
+                </dependency>
+
+            </dependencies>
+
+
+        </profile>
+
+    </profiles>
+
+    <repositories>
+
+        <repository>
+            <id>apache-staging</id>
+            <url>https://repository.apache.org/content/groups/staging/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <tapestry-release-version>5.4.0</tapestry-release-version>
+        <servlet-api-release-version>2.5</servlet-api-release-version>
+        <testng-release-version>6.8.21</testng-release-version>
+        <slf4j-release-version>1.7.13</slf4j-release-version>
+
+    </properties>
+</project>

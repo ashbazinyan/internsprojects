@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.projects.parent</groupId>
+		<artifactId>porjects-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.tt.cn</groupId>
+	<artifactId>tt-cn</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>TT Connectors SOAP REST</name>
+	<description>Project tt-cn</description>
+
+
+	<modules>
+		<module>tt-cn-core</module>
+		<module>tt-cn-contract</module>
+		<module>tt-cn-provider</module>
+		</modules>
+
+	<!-- ============== VERSIONS DEFINITIONS =========== -->
+	<properties>
+
+		<java.version>1.7</java.version>
+		<xa-tapestry-ejb3.version>1.0.2</xa-tapestry-ejb3.version>
+		<jaxb.version>2.0</jaxb.version>
+		<cxf-version>2.2.10</cxf-version>
+		<jackson.version>2.5.4</jackson.version>
+		<pe-version>1.0-SNAPSHOT</pe-version>
+		<openejb.version>4.6.0</openejb.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.14</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>3.0.0.ga</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- Additionnal dependencies for Connectors -->
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>${jaxb.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- JSTL -->
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.tt.pe</groupId>
+				<artifactId>tt-pe-contract</artifactId>
+				<version>${pe-version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.tt.pe</groupId>
+				<artifactId>tt-pe-provider</artifactId>
+				<version>${pe-version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				<version>${cxf-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-http</artifactId>
+				<version>${cxf-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- Rest -->
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-bundle-jaxrs</artifactId>
+				<version>2.2.10</version>
+			</dependency>
+			<!-- For Tomcat -->
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>jsr311-api</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<!-- For Tomee -->
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>6.0-5</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

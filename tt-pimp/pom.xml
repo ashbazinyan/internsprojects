@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.projects.parent</groupId>
+		<artifactId>porjects-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.tt.pimp</groupId>
+	<artifactId>tt-pimp</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>TT Pimp</name>
+	<description>Protocol IMPlementation</description>
+	<!--<url>${site.url}/${site.name}</url>-->
+	<modules>
+
+		<module>tt-pimp-barachuda</module>
+	</modules>
+
+	<properties>
+		<saranlv.version>2.87</saranlv.version>
+		<nlvdico.version>0.113</nlvdico.version>
+	     <pm-model.version>1.0-SNAPSHOT</pm-model.version>
+		<java.version>1.7</java.version>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+
+            <!-- PM Model -->
+            <dependency>
+                <groupId>com.tt.pm</groupId>
+                <artifactId>tt-pm-model</artifactId>
+                <version>${pm-model.version}</version>
+            </dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

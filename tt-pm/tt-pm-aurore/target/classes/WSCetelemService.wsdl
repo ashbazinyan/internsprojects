@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://xfire.codehaus.org/WSCetelemService" xmlns:ns2="http://backoffice.wsCetelem.atosworldline.com" xmlns:ns1="http://wsCetelem.atosworldline.com" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="http://xfire.codehaus.org/WSCetelemService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://wsCetelem.atosworldline.com">
+<xsd:complexType name="WSCetelemCreditRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="acceptorId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="appliId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="montantDuBien" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemCreditResp">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemTabCreditPayment" nillable="true" type="ns2:ArrayOfWSCetelemMerchantCreditPaymentModality"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="acceptorId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="appliId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemMerchantPaymentModalityProductCode" nillable="true" type="ns2:ArrayOfWSCetelemBinProductCode"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreAidRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="appliId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardBin" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreAidResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemAuroreCardAid" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="acceptorId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="appliId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemResp">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemTabPayment" nillable="true" type="ns2:ArrayOfWSCetelemMerchantPaymentModality"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreAidByCardBinAndCardTypeRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="appliId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardBin" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemAuroreAidByCardBinAndCardTypeResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemAuroreCardAid" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemNxCBRequest">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="acceptorCountry" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="acceptorId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="acceptorType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="brandId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="modalityId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="networkId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemNxCBResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="wsCetelemSettlementAcceptorTab" nillable="true" type="ns2:ArrayOfWSCetelemSettlementModeAndAcceptor"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xfire.codehaus.org/WSCetelemService">
+<xsd:element name="searchCreditPaymentModalities">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemCreditRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchCreditPaymentModalitiesResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemCreditResp"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchPaymentModalitiesForACardAliasBin">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemAuroreRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchPaymentModalitiesForACardAliasBinResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemAuroreResponse"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchAidForACardBin">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemAuroreAidRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchAidForACardBinResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemAuroreAidResponse"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchPaymentModalitiesForACardAlias">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchPaymentModalitiesForACardAliasResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemResp"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchAidForACardBinAndCardType">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemAuroreAidByCardBinAndCardTypeRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="searchAidForACardBinAndCardTypeResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemAuroreAidByCardBinAndCardTypeResponse"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="pingWSCetelem">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="pingWSCetelemResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getSettlementModesForBrandAndMerchant">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSCetelemNxCBRequest"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getSettlementModesForBrandAndMerchantResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:WSCetelemNxCBResponse"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://backoffice.wsCetelem.atosworldline.com">
+<xsd:complexType name="ArrayOfWSCetelemMerchantCreditPaymentModality">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="WSCetelemMerchantCreditPaymentModality" nillable="true" type="ns2:WSCetelemMerchantCreditPaymentModality"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemMerchantCreditPaymentModality">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cardAlias" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="code" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="endValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="monthlyPayment" type="xsd:long"/>
+<xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="shortTerm" type="xsd:int"/>
+<xsd:element minOccurs="0" name="startValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="type" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfWSCetelemBinProductCode">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="WSCetelemBinProductCode" nillable="true" type="ns2:WSCetelemBinProductCode"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemBinProductCode">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cardBin" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardBrand" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="productCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="wsCetelemMerchantPaymentModality" nillable="true" type="ns2:ArrayOfWSCetelemMerchantPaymentModality"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfWSCetelemMerchantPaymentModality">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="WSCetelemMerchantPaymentModality" nillable="true" type="ns2:WSCetelemMerchantPaymentModality"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemMerchantPaymentModality">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cardAlias" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cardType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="code" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="endValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="startValidity" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfWSCetelemSettlementModeAndAcceptor">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="WSCetelemSettlementModeAndAcceptor" nillable="true" type="ns2:WSCetelemSettlementModeAndAcceptor"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSCetelemSettlementModeAndAcceptor">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="SAEndValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAStartValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAacceptorCountry" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAacceptorId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAacceptorType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAbrandId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAcreationDate" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAmaxAmount" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAminAmount" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAmodifDate" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAmodifUserId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAnetworkId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SAnumOrdre" type="xsd:long"/>
+<xsd:element minOccurs="0" name="SMbrandId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMcode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMcreationDate" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMcreditType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMdefaultEndValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMdefaultStartValidity" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMmodalityId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMmodifDate" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMmodifUserId" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMmonthlyPayment" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMname" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="SMshortTerm" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="pingWSCetelemRequest">
+    <wsdl:part name="parameters" element="tns:pingWSCetelem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingWSCetelemResponse">
+    <wsdl:part name="parameters" element="tns:pingWSCetelemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentModalitiesForACardAliasBinRequest">
+    <wsdl:part name="parameters" element="tns:searchPaymentModalitiesForACardAliasBin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAidForACardBinResponse">
+    <wsdl:part name="parameters" element="tns:searchAidForACardBinResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchCreditPaymentModalitiesResponse">
+    <wsdl:part name="parameters" element="tns:searchCreditPaymentModalitiesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSettlementModesForBrandAndMerchantRequest">
+    <wsdl:part name="parameters" element="tns:getSettlementModesForBrandAndMerchant">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAidForACardBinRequest">
+    <wsdl:part name="parameters" element="tns:searchAidForACardBin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAidForACardBinAndCardTypeRequest">
+    <wsdl:part name="parameters" element="tns:searchAidForACardBinAndCardType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAidForACardBinAndCardTypeResponse">
+    <wsdl:part name="parameters" element="tns:searchAidForACardBinAndCardTypeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentModalitiesForACardAliasRequest">
+    <wsdl:part name="parameters" element="tns:searchPaymentModalitiesForACardAlias">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentModalitiesForACardAliasResponse">
+    <wsdl:part name="parameters" element="tns:searchPaymentModalitiesForACardAliasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchCreditPaymentModalitiesRequest">
+    <wsdl:part name="parameters" element="tns:searchCreditPaymentModalities">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSettlementModesForBrandAndMerchantResponse">
+    <wsdl:part name="parameters" element="tns:getSettlementModesForBrandAndMerchantResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentModalitiesForACardAliasBinResponse">
+    <wsdl:part name="parameters" element="tns:searchPaymentModalitiesForACardAliasBinResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSCetelemServicePortType">
+    <wsdl:operation name="searchCreditPaymentModalities">
+      <wsdl:input name="searchCreditPaymentModalitiesRequest" message="tns:searchCreditPaymentModalitiesRequest">
+    </wsdl:input>
+      <wsdl:output name="searchCreditPaymentModalitiesResponse" message="tns:searchCreditPaymentModalitiesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentModalitiesForACardAliasBin">
+      <wsdl:input name="searchPaymentModalitiesForACardAliasBinRequest" message="tns:searchPaymentModalitiesForACardAliasBinRequest">
+    </wsdl:input>
+      <wsdl:output name="searchPaymentModalitiesForACardAliasBinResponse" message="tns:searchPaymentModalitiesForACardAliasBinResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAidForACardBin">
+      <wsdl:input name="searchAidForACardBinRequest" message="tns:searchAidForACardBinRequest">
+    </wsdl:input>
+      <wsdl:output name="searchAidForACardBinResponse" message="tns:searchAidForACardBinResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentModalitiesForACardAlias">
+      <wsdl:input name="searchPaymentModalitiesForACardAliasRequest" message="tns:searchPaymentModalitiesForACardAliasRequest">
+    </wsdl:input>
+      <wsdl:output name="searchPaymentModalitiesForACardAliasResponse" message="tns:searchPaymentModalitiesForACardAliasResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAidForACardBinAndCardType">
+      <wsdl:input name="searchAidForACardBinAndCardTypeRequest" message="tns:searchAidForACardBinAndCardTypeRequest">
+    </wsdl:input>
+      <wsdl:output name="searchAidForACardBinAndCardTypeResponse" message="tns:searchAidForACardBinAndCardTypeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pingWSCetelem">
+      <wsdl:input name="pingWSCetelemRequest" message="tns:pingWSCetelemRequest">
+    </wsdl:input>
+      <wsdl:output name="pingWSCetelemResponse" message="tns:pingWSCetelemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSettlementModesForBrandAndMerchant">
+      <wsdl:input name="getSettlementModesForBrandAndMerchantRequest" message="tns:getSettlementModesForBrandAndMerchantRequest">
+    </wsdl:input>
+      <wsdl:output name="getSettlementModesForBrandAndMerchantResponse" message="tns:getSettlementModesForBrandAndMerchantResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSCetelemServiceHttpBinding" type="tns:WSCetelemServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="searchCreditPaymentModalities">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="searchCreditPaymentModalitiesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchCreditPaymentModalitiesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentModalitiesForACardAliasBin">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="searchPaymentModalitiesForACardAliasBinRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentModalitiesForACardAliasBinResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAidForACardBin">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="searchAidForACardBinRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchAidForACardBinResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentModalitiesForACardAlias">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="searchPaymentModalitiesForACardAliasRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentModalitiesForACardAliasResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAidForACardBinAndCardType">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="searchAidForACardBinAndCardTypeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchAidForACardBinAndCardTypeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pingWSCetelem">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="pingWSCetelemRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingWSCetelemResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSettlementModesForBrandAndMerchant">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getSettlementModesForBrandAndMerchantRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSettlementModesForBrandAndMerchantResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSCetelemService">
+    <wsdl:port name="WSCetelemServiceHttpPort" binding="tns:WSCetelemServiceHttpBinding">
+      <wsdlsoap:address location="http://ws-cetelem.dev-agile.qlf.sips.priv.atos.fr/cetelem-ws/services/WSCetelemService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

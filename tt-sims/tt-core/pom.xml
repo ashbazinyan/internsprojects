@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+
+        <artifactId>tt-sims</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <groupId>com.tt.sims</groupId>
+    </parent>
+
+    <artifactId>tt-core</artifactId>
+    <packaging>jar</packaging>
+    <name>TT Core</name>
+    <description>Core classes for the TT (secure web-service calls)</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

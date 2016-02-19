@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+        <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+        <head>
+            <meta charset="utf-8"/>
+            <title>${title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="description" content=""/>
+            <meta name="author" content=""/>
+            <!-- Fav and touch icons -->
+            <link rel="shortcut icon" href="${asset:context:/favicon.ico}"/>
+        </head>
+
+        <body>
+        <!--- header files -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid col-xs-offset-1">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-user"></span>Hi! Sign in or register</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-cd"></span>Lessons <span
+                                class="sr-only">(current)</span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-tag"></span>Sell</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>Help &amp; Contact</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">My imusic </a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-bell"/></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!--- end header fiels here -->
+        <div class="container">
+            <div class="row">
+                <t:imusiclogo/>
+                <t:search/>
+                <t:navigationpane/>
+            </div>
+            <div class="container">
+                <t:carousel/>
+                <t:advertisement/>
+            </div>
+        </div>
+                <t:body/>
+                <t:flexcarousel/>
+                <t:dailylessons/>
+                <t:sloganbottom/>
+
+
+        <hr/>
+        <footer>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 navbar-default">
+                        <div class="mehra">
+                            <a href="#" target="new_blank">Community</a>
+                            <a href="#" target="new_blank">About Imusic</a>
+                            <a href="#" target="new_blank">Announcement</a>
+                            <a href="#" target="new_blank">security center </a>
+
+                            <a href="#" target="new_blank">Resolution center</a>
+                            <a href="#" target="new_blank">Seller information center</a>
+                            <a href="#" target="new_blank">Policies</a>
+                            <a href="#" target="new_blank">Site map</a>
+                            <a href="#" target="new_blank">Imusic official time</a>
+                            <a href="#" target="new_blank">Preview new features</a>
+                            <a href="#" target="new_blank">Contact us</a>
+                            <a href="#" target="new_blank">Tell us what you think</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </body>
+        </html>

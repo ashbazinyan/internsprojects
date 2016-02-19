@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>tt-pp-simu-web</artifactId>
+	<packaging>war</packaging>
+	<name>TT Front Tier</name>
+	<parent>
+		<groupId>com.tt.pp</groupId>
+		<artifactId>tt-pp</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+
+		<!-- Others -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.tt.pp</groupId>
+			<artifactId>tt-pp-core</artifactId>
+			<version>${project.version}</version>
+
+			<scope>provided</scope>
+
+		</dependency>
+
+
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>local</id>
+
+			<build>
+				<finalName>tt-pp-web</finalName>
+			</build>
+			<activation> 
+				<activeByDefault>false</activeByDefault> 
+			</activation>
+
+			<dependencies>
+				<dependency>
+					<groupId>com.tt.pp</groupId>
+					<artifactId>tt-pp-config</artifactId>
+					<version>${project.version}</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<build>
+
+		<pluginManagement>
+			<plugins>
+			
+			
+			
+				<plugin>
+					<groupId>com.googlecode.t7mp</groupId>
+					<artifactId>maven-t7-plugin</artifactId>
+					<configuration>
+						<tomcatHttpPort>8080</tomcatHttpPort>
+						<tomcatShutdownPort>9090</tomcatShutdownPort>
+						<tomcatVersion>6.0.35</tomcatVersion>
+
+
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

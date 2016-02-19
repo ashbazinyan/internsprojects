@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tt.pm</groupId>
+		<artifactId>tt-pm</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>tt-pm-aurore</artifactId>
+	<name>TT PM Aurore</name>
+
+	<properties>
+		<sonar.exclusions>com/tt/pm/aurore/webservice/client/*.java</sonar.exclusions>
+		<pit.report.skip>false</pit.report.skip>
+	</properties>
+
+	<dependencies>
+
+
+		<dependency>
+			<groupId>com.tt.pm</groupId>
+			<artifactId>tt-pm-common</artifactId>
+		</dependency>
+
+		<!-- Testing dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-assert-core</artifactId>
+			<version>2.0M10</version>
+		</dependency>
+
+
+		<!-- cxf -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-bundle</artifactId>
+		</dependency>
+	</dependencies>
+</project>

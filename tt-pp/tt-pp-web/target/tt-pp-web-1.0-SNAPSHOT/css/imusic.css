@@ -1,0 +1,332 @@
+/* CSS Document */
+/* heade start here */
+body {
+    padding-top: 0px !important;
+}
+
+.navbar-default {background-color:#f7f7f7;
+-webkit-box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+-moz-box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+}
+.navbar-my {background-color:#f7f7f7;
+-webkit-box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+-moz-box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+box-shadow: 0px 3px 0px 0px rgba(204,204,204,1);
+}
+.navbar-right {
+    float: right !important;
+    margin-right: 80px;
+}
+.toplinks{padding-top:10px;padding-left:30px}
+.search {
+    padding-right: 17px;
+    padding-top: 20px;
+}
+.btn-success{color:#000;background-color:#ffda3c;border-color:#ffda3c}
+.input-group-btn {
+    font-size: 0;
+    padding-left: 16px;
+    position: relative;
+    white-space: nowrap;
+}
+/* end here */
+
+/* side bar and page */
+
+.title-banner{font-size:32px; color:#000;padding-top:0px;}
+.title-banner2{font-size:26px; color:#000;padding-top:69px;}
+.side-bootom-bar{border-bottom:1px solid #ddd;}
+.topbanner{margin-top:10px;}
+.mehra-color{background-color:#f7f7f7;
+height:139px; margin-top:10px;}
+.box-banner{background-color:#f7f7f7;height:139px; margin-top:10px; border:1px solid #ddd;}
+#banner-text{font-weight:bold; font-size:13px;}
+#banner-tex{ font-size: 15px;
+    font-weight: bold;
+    padding-top: 48px;
+    text-align: justify;}
+	.btn-setting{padding-top:69px;}
+.btn2{display:inline-block;padding:2px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}
+.image-setting{margin-left:15px;}
+.btn-default{color:#ffffff;background-color:#000000;border-color:#ccc}
+.nav-sidebar { 
+    width: 100%;
+    padding: 10px 0; 
+
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+}
+.nav-sidebar .active a { 
+    cursor: default;
+    background-color: #19b4e5; 
+    color: #fff; 
+}
+.nav-sidebar .active a:hover {
+    background-color: #E50000;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+.btn-blog {
+    color: #ffffff;
+    background-color: #E50000;
+    border-color: #E50000;
+    border-radius:0;
+    margin-bottom:10px
+}
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color:#0b56a8;
+    border-color: #0b56a8;
+}
+article h2{color:#333333;}
+h2{color:#0b56a8;}
+ .margin10{margin-bottom:10px; margin-right:10px;}
+ 
+ .container .text-style
+{
+  text-align: justify;
+  line-height: 23px;
+  margin: 0 13px 0 0;
+  font-size: 19px;
+}
+/* social icons */
+.social-bar{margin-top:20px;}
+.mobile {
+    text-align: center;
+    width: 15%;
+}
+.letter {
+    margin-left: 2px;
+    padding-top: 11px;
+    text-align: center;
+    width: 16%;
+}
+.message
+{ text-align:center;width:13%;}
+
+/* end here */
+/* footer */
+.mehra {
+    font-size: 0px;
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: auto;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 12px;
+    padding-top: 10px;
+    width: 100%;
+   }
+/* end here */
+.mehra > a {
+    font-size: 11px;
+    margin-left: 8px;
+}
+.background-image{background-image:url(../images/image2.png);
+}
+.mybtn{margin-top:15%;margin-bottom:15%;margin-left:75%;}
+.btn-transperent{color:#fff;background-color:transparent;border-color:#ffffff;}
+
+.blank_space{
+	margin-top:30px;
+	border-bottom:1px solid #000000;
+	}
+ /* new classes add  */
+ 
+ .sidebar-bg{background-color:#f9f9f9} 
+ .top-lessons {
+    color: #ffcc00;
+    font-size: 25px;
+    font-weight: bold;
+	padding:20px;
+ }
+ .title {
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.sidebar-content{  color: #5dc1e8;
+    padding-left: 25px;
+    width: 81%;
+	font-weight:bold;}
+	.btnset{ margin-bottom: 15px;
+    margin-left: 26px;
+    margin-top: 15px;}
+	.btnset2 {
+    margin-bottom: 18px;
+    margin-left: 26px;
+    margin-top: 0;
+}
+	.content-sidebar{font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: left;
+    width: 66%;}
+	.margin{padding:0px;}
+	.mike{  height: 408px;}
+	.musiclesson{margin:10px 0 0 0;}
+	.brand {
+    border-bottom: 1px solid;
+    margin: 34px 0 0;
+}
+.border
+{
+border-bottom:1px solid #b5b7bb;
+}
+.daily-class
+{
+margin-top:13px;
+padding-top:16px;
+background-color:#efefef;
+}
+.small-images {
+    background: #efefef;
+    padding: 10px;
+	 margin-bottom: 10px;
+    margin-top: 11px;
+}
+.get-inspired
+{
+border:1px solid #efefef;
+background-color:#efefef;
+margin-bottom:15px;
+}
+.explore {
+    padding-top: 8px;
+}
+.carousel-indicators{bottom:0px;}
+.navbar-sot {
+    background-color: #f7f7f7;
+    box-shadow: 0 3px 0 0 rgba(204, 204, 204, 1);
+    margin-left: 42px;
+    width: 95%;
+}
+.logo-set {
+    margin-left: 16px;
+}
+.settings{ margin-left: 28px;}
+.six-col {
+    margin-left: 12px;
+}
+.col-md-6 {
+    padding-right: 0px;
+}
+.container.daily-class.logo-set {
+    width: 98%;
+}
+.row.blank_space.logo-set{width:98%;}
+/*---------responsive-html-start--------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+{
+	.navbar-sot {
+    
+    margin-left: 0px;
+    width: 100%;
+}
+	.mike {
+    height: 100%;
+}
+    .guitar {
+    height: 26px;
+}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) 
+ {
+ .lessons
+ {
+ width:50%;
+ }
+ }
+@media only screen and (min-width: 640px) and (max-width: 768px) 
+ {
+ .lessons
+ {
+ width:32%;
+ }
+ 
+.music-lesson{
+    float: left;
+    width: 67%;
+}
+.mike {
+    height: 428px;
+    width: 100%;
+}
+.small-images
+{
+width:50%;
+float:left;
+}
+ }
+@media only screen and (min-width: 768px) and (max-width: 1024px) 
+ {
+ .asd
+ {
+ float:left;
+ width:75%;
+ }
+ .music-lesson
+ {
+ float:left;
+ width:75%;
+ }
+  .mike {
+    height: 428px;
+    width: 100%;
+}
+.small-images
+{
+width:25%;
+float:left;
+}
+ }
+ @media only screen and (min-width: 1024px) and (max-width: 1280px) 
+ {
+ .asd
+ {
+ float:left;
+ width:75%;
+ }
+ .music-lesson
+ {
+ float:left;
+ width:75%;
+ }
+.small-images
+{
+width:25%;
+float:left;
+}
+ }
+ @media only screen and (min-width: 980px) and (max-width: 1199px) 
+ {
+ .mike {
+    height: 345px;
+    width: 100%;
+}
+ }

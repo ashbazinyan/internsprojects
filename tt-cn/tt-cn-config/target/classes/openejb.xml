@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openejb>
+
+	<Container id="My Stateful Container" type="STATEFUL">
+		Passivator org.apache.openejb.core.stateful.SimplePassivater
+		TimeOut 60
+		PoolSize 1000
+		BulkPassivate 100
+	</Container>
+
+	<Container id="My Stateless Container" type="STATELESS">
+		TimeOut 0
+		PoolSize 20
+		StrictPooling false
+	</Container>
+
+</openejb>

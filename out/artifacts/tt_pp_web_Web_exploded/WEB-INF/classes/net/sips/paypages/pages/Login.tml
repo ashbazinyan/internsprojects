@@ -1,0 +1,16 @@
+<html t:type="layout" title="newapp com.example"
+           xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+
+<div class="row">
+    <div class="span4 offset3">
+        <t:form t:id="loginForm">
+            <h2>Please sign in</h2>
+            <t:textfield t:id="merchantName" class="form-control" required="required" autofocus="autofocus" value="merchantNameProperty"/>
+            <t:textfield t:id="merchantIdentifier" class="form-control" required="required" autofocus="autofocus" value="merchantIdentifierProperty"/>
+            <t:select value="offer" model="listOfOffers"/>
+            <t:submit class="btn btn-large btn-primary" value="Sign in"/>
+        </t:form>
+    </div>
+</div>
+
+</html>

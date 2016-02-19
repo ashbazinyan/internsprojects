@@ -1,0 +1,13 @@
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/common/SessionData.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/managers/NotificationManager.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/resourcelocator/ResourceLocator.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/resourcelocator/ResourceLocatorUnit.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/productmeans/general/Product.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/workers/User.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/managers/StoreManager.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/managers/CardManager.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/productmeans/general/IProductOutput.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/productmeans/general/ProductAddOutput.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/management/relation/Role.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/workers/seller/Seller.java
+/home/bellag/ttproject/tt-pp/tt-pp-core/src/main/java/com/tt/pp/core/model/process/store/productmeans/general/ProductAddInput.java

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.transaction.manager_lookup_class">org.apache.openejb.hibernate.TransactionManagerLookup</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+    <!--property name="hibernate.hbm2ddl.auto">create</property-->
+    <property name="hibernate.hbm2ddl.auto">validate</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.format_sql">false</property>
+    <property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+   	<property name="hibernate.cache.use_query_cache">true</property>
+   	<property name="hibernate.cache.use_second_level_cache">true</property>
+    <!-- property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property -->
+
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.Offer"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.Client"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.AcquirerContract"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.AttemptsNumber"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.AuthorizedOriginUrl"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.Contact"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MerchantPoiReport"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.AcceptedPaymentMeanBrand"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.ConvenienceCharge"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.Currency"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MerchantOption"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MerchantPoi"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MerchantPoiAcquirerContract"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MerchantRule"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.OrderChannel"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.PaymentFunction"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.PaymentMeanScheme"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.PayPage"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.SecretKey"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.SoeFunction"/>-->
+	<!--<class-cache usage="read-write" class="net.atos.sips.mm.core.MinitixCertificate"/>-->
+
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.Offer.merchantPois"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.Client.merchantPois"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.payPages"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.secretKeys"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.attemptsNumbers"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.authorizedOriginUrls"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.contacts"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.merchantPoiReports"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.acceptedPaymentMeanBrands"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.convenienceCharges"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.paymentFunctions"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.soeFunctions"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.merchantOptions"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoi.merchantPoiAcquirerContracts"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MerchantPoiAcquirerContract.merchantRules"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.AcquirerContract.paymentMeanSchemes"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.AcquirerContract.currencies"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.AcquirerContract.orderChannels"/>-->
+	<!--<collection-cache usage="read-write" collection="net.atos.sips.mm.core.MinitixAcquirerContract.minitixCertificates"/>-->
+  </session-factory>
+</hibernate-configuration>
+

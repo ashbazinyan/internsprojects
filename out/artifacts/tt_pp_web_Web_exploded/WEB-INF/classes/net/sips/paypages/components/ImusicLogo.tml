@@ -1,0 +1,6 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+             xmlns:p="tapestry:parameter">
+<div class="col-lg-2">
+    <img src="images/logo.png" alt="imusic" title="imusic" class="img-responsive logo-set"/>
+</div>
+    </t:container>

@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_ID"
+		 version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>WebApp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- WARNING : to change name -->
+<!--	<servlet>
+		<servlet-name>XmlRequestMaker</servlet-name>
+		<servlet-class>net.atos.sips.sims.cba.paylib.XmlRequestMaker</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AjaxSipsPaypagePostGetSeal</servlet-name>
+		<servlet-class>net.atos.sips.sim.util.AjaxSipsPaypagePostGetSeal</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AjaxJsonGetSeal</servlet-name>
+		<servlet-class>net.atos.sips.sim.util.AjaxJsonGetSeal</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DebugTools</servlet-name>
+		<servlet-class>net.atos.sips.sim.engine.debug.DebugTools</servlet-class>
+	</servlet>-->
+
+	<servlet>
+		<servlet-name>InitApplication</servlet-name>
+		<servlet-class>com.tt.sims.InitApplication</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+<servlet>
+	<servlet-name>LandingPageServlet</servlet-name>
+	<servlet-class>com.tt.sims.store.LandingPageServlet</servlet-class>
+	<load-on-startup>2</load-on-startup>
+</servlet>
+
+	<servlet>
+		<display-name>PaymentConfirmation</display-name>
+		<servlet-name>PaymentConfirmation</servlet-name>
+		<servlet-class>com.tt.sims.sipsmessagev2.PaymentConfirmation</servlet-class>
+	</servlet>
+<!--
+	<servlet>
+		<display-name>GenericSoapRequestBuilder</display-name>
+		<servlet-name>GenericSoapRequestBuilder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.soap.GenericSoapRequestBuilder</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<display-name>GenericSoapServiceCallAfterCheck</display-name>
+		<servlet-name>GenericSoapServiceCallAfterCheck</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.soap.GenericSoapServiceCallAfterCheck</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>MainServletWSOffice</servlet-name>
+		<servlet-class>net.atos.sips.sim.wsoffice10.MainServletWSOffice</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>EventNotifierLogReaderServlet</servlet-name>
+		<servlet-class>net.atos.sips.en.log.reader.EventNotifierLogReaderServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>BDDDataReader</servlet-name>
+		<servlet-class>net.atos.sips.sim.bdddatareader.BDDDataReader</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DBReader</servlet-name>
+		<servlet-class>net.atos.sips.sim.bdddatareader.DBReader</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AjaxSession</servlet-name>
+		<servlet-class>net.atos.sips.sim.util.AjaxSession</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DeleteAjaxSessionField</servlet-name>
+		<servlet-class>net.atos.sips.sim.util.DeleteAjaxSessionField</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PaymentConfirmation</display-name>
+		<servlet-name>PaymentConfirmation</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsmessagev2.PaymentConfirmation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>BasicEmail</display-name>
+		<servlet-name>BasicEmail</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsmessagev2.BasicEmail</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SendBasicSms</display-name>
+		<servlet-name>SendBasicSms</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsmessagev2.SendBasicSms</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EnrollmentVerificationInternal</display-name>
+		<servlet-name>EnrollmentVerificationInternal</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.internal.EnrollmentVerification</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AuthenticationValidationInternal</display-name>
+		<servlet-name>AuthenticationValidationInternal</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.internal.AuthenticationValidation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EnrollmentVerificationStandalone</display-name>
+		<servlet-name>EnrollmentVerificationStandalone</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.standalone.EnrollmentVerification</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AuthenticationValidationStandalone</display-name>
+		<servlet-name>AuthenticationValidationStandalone</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.standalone.AuthenticationValidation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>EnrollmentVerificationASP</display-name>
+		<servlet-name>EnrollmentVerificationASP</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.asp.EnrollmentVerification</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AuthenticationValidationASP</display-name>
+		<servlet-name>AuthenticationValidationASP</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.asp.AuthenticationValidation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EnrollmentVerificationASP1</display-name>
+		<servlet-name>EnrollmentVerificationASP1</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.asp1.EnrollmentVerification</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AuthenticationValidationASP1</display-name>
+		<servlet-name>AuthenticationValidationASP1</servlet-name>
+		<servlet-class>net.atos.sips.sim.mpi.asp1.AuthenticationValidation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>getCardData</display-name>
+		<servlet-name>getCardData</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.paymentmeaninfo.GetCardData</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PanToToken</display-name>
+		<servlet-name>PanToToken</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.token.PanToToken</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>TokenToPan</display-name>
+		<servlet-name>TokenToPan</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.token.TokenToPan</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Cancel</display-name>
+		<servlet-name>Cancel</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Cancel</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Duplicate</display-name>
+		<servlet-name>Duplicate</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Duplicate</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Referral</display-name>
+		<servlet-name>Referral</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Referral</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Refund</display-name>
+		<servlet-name>Refund</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Refund</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<display-name>Validate</display-name>
+		<servlet-name>Validate</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Validate</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Recycle</display-name>
+		<servlet-name>Recycle</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.Recycle</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GetTransactionData</display-name>
+		<servlet-name>GetTransactionData</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.diagnostic.GetTransactionData</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GetVelocityData</display-name>
+		<servlet-name>GetVelocityData</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.fraud.GetVelocityData</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PrivatePlainAuthor</display-name>
+		<servlet-name>PrivatePlainAuthor</servlet-name>
+		<servlet-class>net.atos.sips.sims.sipsofficeserver.privateoffice.plainauthor.PrivatePlainAuthor</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CBAPlainAuthor</display-name>
+		<servlet-name>CBAPlainAuthor</servlet-name>
+		<servlet-class>net.atos.sips.sims.cba.partnerwp.CBAPlainAuthor</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CBAPlainAuthorRawRequest</display-name>
+		<servlet-name>CBAPlainAuthorRawRequest</servlet-name>
+		<servlet-class>net.atos.sips.sims.cba.partnerwp.CBAPlainAuthorRawRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>ComputeSeal</display-name>
+		<servlet-name>ComputeSeal</servlet-name>
+		<servlet-class>net.atos.sips.sim.miscellaneous.ComputeSeal</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<display-name>ComputeSealJSON</display-name>
+		<servlet-name>ComputeSealJSON</servlet-name>
+		<servlet-class>net.atos.sips.sim.miscellaneous.ComputeSealJSON</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>IFramePaymentAllField</display-name>
+		<servlet-name>IFramePaymentAllField</servlet-name>
+		<servlet-class>net.atos.sips.sim.iframe.IFramePaymentAllField</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Essai</display-name>
+		<servlet-name>Essai</servlet-name>
+		<servlet-class>net.atos.sips.sim.iframe.Essai</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>HandleHttpRequestForMonsara</display-name>
+		<servlet-name>HandleHttpRequestForMonsara</servlet-name>
+		<servlet-class>net.atos.sips.sim.engine.cars.HandleHttpRequestForMonsara</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenerateAskedForm</display-name>
+		<servlet-name>GenerateAskedForm</servlet-name>
+		<servlet-class>net.atos.sips.sim.dynamic.GenerateAskedForm</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenerateAskedWebServiceClient</display-name>
+		<servlet-name>GenerateAskedWebServiceClient</servlet-name>
+		<servlet-class>net.atos.sips.sim.dynamic.GenerateAskedWebServiceClient</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CreditHolder</display-name>
+		<servlet-name>CreditHolder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.CreditHolder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SOCv2PrivateCheckoutServiceFinalize</display-name>
+		<servlet-name>SOCv2PrivateCheckoutServiceFinalize</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.privatecheckout.Finalize</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SOCv2PrivateCheckoutServiceInitialize</display-name>
+		<servlet-name>SOCv2PrivateCheckoutServiceInitialize</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.privatecheckout.Initialize</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SOCv2PrivateCheckoutServiceFinalizeStatic</display-name>
+		<servlet-name>SOCv2PrivateCheckoutServiceFinalizeStatic</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.privatecheckout.FinalizeStatic</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SOCv2PrivateCheckoutServiceInitializeStatic</display-name>
+		<servlet-name>SOCv2PrivateCheckoutServiceInitializeStatic</servlet-name>
+		<servlet-class> net.atos.sips.sim.sipsofficeconnectv2.privatecheckout.InitializeStatic</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenericServiceCallAfterCheck</display-name>
+		<servlet-name>GenericServiceCallAfterCheck</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.rest.GenericServiceCallAfterCheck</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenericJsonRequestBuilder</display-name>
+		<servlet-name>GenericJsonRequestBuilder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.rest.GenericJsonRequestBuilder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenericJsonRequestBuilderWithComposite</display-name>
+		<servlet-name>GenericJsonRequestBuilderWithComposite</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.rest.GenericJsonRequestBuilderWithComposite</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>WalletAllOperation</display-name>
+		<servlet-name>WalletAllOperation</servlet-name>
+		<servlet-class> net.atos.sips.sim.sipsofficeconnectv2.walletv2.WalletAllOperation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>F2FCompletion</display-name>
+		<servlet-name>F2FCompletion</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.f2fcheckout.F2FCompletion</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PrivateCheckout</display-name>
+		<servlet-name>PrivateCheckout</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.privatecheckout.PrivateCheckout</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GenericServiceCallAfterCheckWhithSpecificResponseUrl</display-name>
+		<servlet-name>GenericServiceCallAfterCheckWhithSpecificResponseUrl</servlet-name>
+		<servlet-class>net.atos.sips.sim.inapp.GenericServiceCallAfterCheckWhithSpecificResponseUrl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>InAppGenericRestCall</display-name>
+		<servlet-name>InAppGenericRestCall</servlet-name>
+		<servlet-class>net.atos.sips.sim.inapp.InAppGenericRestCall</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>crossDomainGenericRestCall</display-name>
+		<servlet-name>crossDomainGenericRestCall</servlet-name>
+		<servlet-class>net.atos.sips.sim.crossDomain.crossDomainGenericRestCall</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AjaxCipherRedirectionSdkData</display-name>
+		<servlet-name>AjaxCipherRedirectionSdkData</servlet-name>
+		<servlet-class>net.atos.sips.sim.inapp.AjaxCipherRedirectionSdkData</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AcceptChallenge</display-name>
+		<servlet-name>AcceptChallenge</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.AcceptChallenge</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>RefuseChallenge</display-name>
+		<servlet-name>RefuseChallenge</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.cashmanagement.RefuseChallenge</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AjaxMerchantTransactionDateTime</display-name>
+		<servlet-name>AjaxMerchantTransactionDateTime</servlet-name>
+		<servlet-class>net.atos.sips.sim.util.AjaxMerchantTransactionDateTime</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>HandleHttpRequestForSoap</display-name>
+		<servlet-name>HandleHttpRequestForSoap</servlet-name>
+		<servlet-class>net.atos.sips.sim.engine.soap.HandleHttpRequestForSoap</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SoapServiceCallAfterCheck</display-name>
+		<servlet-name>SoapServiceCallAfterCheck</servlet-name>
+		<servlet-class>net.atos.sips.sim.engine.soap.SoapServiceCallAfterCheck</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>SipsManualResponseHandler</display-name>
+		<servlet-name>SipsManualResponseHandler</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipstools.SipsManualResponseHandler</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EventNotifierCreationConfirmation</display-name>
+		<servlet-name>EventNotifierCreationConfirmation</servlet-name>
+		<servlet-class>net.atos.sips.sim.eventNotifier.TransactionCreation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EventNotifierAbortConfirmation</display-name>
+		<servlet-name>EventNotifierAbortConfirmation</servlet-name>
+		<servlet-class>net.atos.sips.sim.eventNotifier.TransactionAbort</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EventNotifierExpiredConfirmation</display-name>
+		<servlet-name>EventNotifierExpiredConfirmation</servlet-name>
+		<servlet-class>net.atos.sips.sim.eventNotifier.TransactionSessionExpired</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>ComponentVersionManager</display-name>
+		<servlet-name>ComponentVersionManager</servlet-name>
+		<servlet-class>net.atos.sips.sim.componentversion.ComponentVersionManager</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>HttpClientTester</display-name>
+		<servlet-name>HttpClientTester</servlet-name>
+		<servlet-class>net.atos.sips.sim.statusservice.HttpClientTester</servlet-class>
+	</servlet>
+
+-->
+
+	<servlet-mapping>
+		<servlet-name>LandingPageServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+<!--
+
+	&lt;!&ndash; SERVLET MAPPING &ndash;&gt;
+	<servlet-mapping>
+		<servlet-name>HttpClientTester</servlet-name>
+		<url-pattern>/httpTest</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet-mapping>
+		<servlet-name>MainServletWSOffice</servlet-name>
+		<url-pattern>/ws-office-10</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>getCardData</servlet-name>
+		<url-pattern>/SOCv2GetCardData</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Cancel</servlet-name>
+		<url-pattern>/SOCv2Cancel</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TokenToPan</servlet-name>
+		<url-pattern>/SOCv2TokenToPan</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PanToToken</servlet-name>
+		<url-pattern>/SOCv2PanToToken</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BDDDataReader</servlet-name>
+		<url-pattern>/BDDDataReader</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DBReader</servlet-name>
+		<url-pattern>/DBReader</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AjaxSession</servlet-name>
+		<url-pattern>/AjaxSession</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteAjaxSessionField</servlet-name>
+		<url-pattern>/DeleteAjaxSessionField</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Duplicate</servlet-name>
+		<url-pattern>/SOCv2Duplicate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Referral</servlet-name>
+		<url-pattern>/SOCv2Referral</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Refund</servlet-name>
+		<url-pattern>/SOCv2Refund</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Validate</servlet-name>
+		<url-pattern>/SOCv2Validate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Recycle</servlet-name>
+		<url-pattern>/SOCv2Recycle</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EventNotifierLogReaderServlet</servlet-name>
+		<url-pattern>/enlogreader</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EnrollmentVerificationInternal</servlet-name>
+		<url-pattern>/enrollment_verification_internal</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuthenticationValidationInternal</servlet-name>
+		<url-pattern>/authentication_validation_internal</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EnrollmentVerificationStandalone</servlet-name>
+		<url-pattern>/enrollment_verification_standalone</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuthenticationValidationStandalone</servlet-name>
+		<url-pattern>/authentication_validation_standalone</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EnrollmentVerificationASP</servlet-name>
+		<url-pattern>/enrollment_verification_asp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuthenticationValidationASP</servlet-name>
+		<url-pattern>/authentication_validation_asp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EnrollmentVerificationASP1</servlet-name>
+		<url-pattern>/enrollment_verification_asp1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuthenticationValidationASP1</servlet-name>
+		<url-pattern>/authentication_validation_asp1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetTransactionData</servlet-name>
+		<url-pattern>/SOCv2GetTransactionData</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetVelocityData</servlet-name>
+		<url-pattern>/SOCv2GetVelocityData</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PrivatePlainAuthor</servlet-name>
+		<url-pattern>/PrivatePlainAuthor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CBAPlainAuthor</servlet-name>
+		<url-pattern>/CBAPlainAuthor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CBAPlainAuthorRawRequest</servlet-name>
+		<url-pattern>/CBAPlainAuthorRaw</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ComputeSeal</servlet-name>
+		<url-pattern>/ComputeSeal</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ComputeSealJSON</servlet-name>
+		<url-pattern>/ComputeSealJSON</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>IFramePaymentAllField</servlet-name>
+		<url-pattern>/IFramePaymentAllField</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreditHolder</servlet-name>
+		<url-pattern>/SOCv2CreditHolder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Essai</servlet-name>
+		<url-pattern>/Essai</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenerateAskedForm</servlet-name>
+		<url-pattern>/GenerateAskedForm</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenerateAskedWebServiceClient</servlet-name>
+		<url-pattern>/GenerateAskedWebServiceClient</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SOCv2PrivateCheckoutServiceInitialize</servlet-name>
+		<url-pattern>/SOCv2PrivateCheckoutServiceInitialize</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SOCv2PrivateCheckoutServiceFinalize</servlet-name>
+		<url-pattern>/SOCv2PrivateCheckoutServiceFinalize</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SOCv2PrivateCheckoutServiceInitializeStatic</servlet-name>
+		<url-pattern>/SOCv2PrivateCheckoutServiceInitializeStatic</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SOCv2PrivateCheckoutServiceFinalizeStatic</servlet-name>
+		<url-pattern>/SOCv2PrivateCheckoutServiceFinalizeStatic</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericServiceCallAfterCheck</servlet-name>
+		<url-pattern>/GenericServiceCallAfterCheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericJsonRequestBuilder</servlet-name>
+		<url-pattern>/GenericJsonRequestBuilder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericJsonRequestBuilderWithComposite</servlet-name>
+		<url-pattern>/GenericJsonRequestBuilderWithComposite</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericSoapRequestBuilder</servlet-name>
+		<url-pattern>/GenericSoapRequestBuilder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericSoapServiceCallAfterCheck</servlet-name>
+		<url-pattern>/GenericSoapServiceCallAfterCheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>WalletAllOperation</servlet-name>
+		<url-pattern>/WalletAllOperation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>F2FCompletion</servlet-name>
+		<url-pattern>/F2FCompletion</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PrivateCheckout</servlet-name>
+		<url-pattern>/PrivateCheckout</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericServiceCallAfterCheckWhithSpecificResponseUrl</servlet-name>
+		<url-pattern>/GenericServiceCallAfterCheckWhithSpecificResponseUrl</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>InAppGenericRestCall</servlet-name>
+		<url-pattern>/InAppGenericRestCall</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>crossDomainGenericRestCall</servlet-name>
+		<url-pattern>/crossDomainGenericRestCall</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AjaxCipherRedirectionSdkData</servlet-name>
+		<url-pattern>/AjaxCipherRedirectionSdkData</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PaymentConfirmation</servlet-name>
+		<url-pattern>/SipsMessagePaymentConfirmation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BasicEmail</servlet-name>
+		<url-pattern>/SipsMessageBasicEmail</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SendBasicSms</servlet-name>
+		<url-pattern>/SipsMessageSendBasicSms</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>XmlRequestMaker</servlet-name>
+		<url-pattern>/XmlRequestMaker</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AjaxSipsPaypagePostGetSeal</servlet-name>
+		<url-pattern>/AjaxSipsPaypagePostGetSeal</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AjaxJsonGetSeal</servlet-name>
+		<url-pattern>/AjaxJsonGetSeal</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AcceptChallenge</servlet-name>
+		<url-pattern>/SOCv2AcceptChallenge</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RefuseChallenge</servlet-name>
+		<url-pattern>/SOCv2RefuseChallenge</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AjaxMerchantTransactionDateTime</servlet-name>
+		<url-pattern>/AjaxMerchantTransactionDateTime</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HandleHttpRequestForMonsara</servlet-name>
+		<url-pattern>/HandleHttpRequestForMonsara</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HandleHttpRequestForSoap</servlet-name>
+		<url-pattern>/HandleHttpRequestForSoap</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SoapServiceCallAfterCheck</servlet-name>
+		<url-pattern>/SoapServiceCallAfterCheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SipsManualResponseHandler</servlet-name>
+		<url-pattern>/SipsManualResponseHandler</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DebugTools</servlet-name>
+		<url-pattern>/DebugTools</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EventNotifierCreationConfirmation</servlet-name>
+		<url-pattern>/SipsEventNotifierCreationConfirmation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EventNotifierAbortConfirmation</servlet-name>
+		<url-pattern>/SipsEventNotifierAbortConfirmation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EventNotifierExpiredConfirmation</servlet-name>
+		<url-pattern>/SipsEventNotifierExpiredConfirmation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ComponentVersionManager</servlet-name>
+		<url-pattern>/ComponentVersion</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>CardOrder</display-name>
+		<servlet-name>CardOrder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CardOrder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CardCheckEnrollment</display-name>
+		<servlet-name>CardCheckEnrollment</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CardCheckEnrollment</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>WalletCheckEnrollment</display-name>
+		<servlet-name>WalletCheckEnrollment</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.WalletCheckEnrollment</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CardValidateAuthenticationAndOrder</display-name>
+		<servlet-name>CardValidateAuthenticationAndOrder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CardValidateAuthenticationAndOrder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CardValidateAuthentication</display-name>
+		<servlet-name>CardValidateAuthentication</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CardValidateAuthentication</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CreditTransferFinalizeAndOrder</display-name>
+		<servlet-name>CreditTransferFinalizeAndOrder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CreditTransferFinalizeAndOrder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CreditTransferInitialize</display-name>
+		<servlet-name>CreditTransferInitialize</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CreditTransferInitialize</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>DirectDebitOrder</display-name>
+		<servlet-name>DirectDebitOrder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.DirectDebitOrder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>WalletOrder</display-name>
+		<servlet-name>WalletOrder</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.WalletOrder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PaymentProviderInitialize</display-name>
+		<servlet-name>PaymentProviderInitialize</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.PaymentProviderInitialize</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PaymentProviderGetContext</display-name>
+		<servlet-name>PaymentProviderGetContext</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.PaymentProviderGetContext</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>PaymentProviderFinalize</display-name>
+		<servlet-name>PaymentProviderFinalize</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.PaymentProviderFinalize</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>CreditTransferInquire</display-name>
+		<servlet-name>CreditTransferInquire</servlet-name>
+		<servlet-class>net.atos.sips.sim.sipsofficeconnectv2.CreditTransferInquire</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CardOrder</servlet-name>
+		<url-pattern>/SOCv2CardOrder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CardCheckEnrollment</servlet-name>
+		<url-pattern>/SOCv2CardCheckEnrollment</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>WalletCheckEnrollment</servlet-name>
+		<url-pattern>/SOCv2WalletCheckEnrollment</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CardValidateAuthenticationAndOrder</servlet-name>
+		<url-pattern>/SOCv2CardValidateAuthenticationAndOrder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CardValidateAuthentication</servlet-name>
+		<url-pattern>/SOCv2CardValidateAuthentication</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreditTransferFinalizeAndOrder</servlet-name>
+		<url-pattern>/SOCv2CreditTransferFinalizeAndOrder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreditTransferInitialize</servlet-name>
+		<url-pattern>/SOCv2CreditTransferInitialize</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DirectDebitOrder</servlet-name>
+		<url-pattern>/SOCv2DirectDebitOrder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>WalletOrder</servlet-name>
+		<url-pattern>/SOCv2WalletOrder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PaymentProviderInitialize</servlet-name>
+		<url-pattern>/PaymentProviderInitialize</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PaymentProviderGetContext</servlet-name>
+		<url-pattern>/PaymentProviderGetContext</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PaymentProviderFinalize</servlet-name>
+		<url-pattern>/PaymentProviderFinalize</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreditTransferInquire</servlet-name>
+		<url-pattern>/SOCv2CreditTransferInquire</url-pattern>
+	</servlet-mapping>
+-->
+</web-app>
+

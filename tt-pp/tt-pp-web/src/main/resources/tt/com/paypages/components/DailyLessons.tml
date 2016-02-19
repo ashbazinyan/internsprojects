@@ -1,0 +1,36 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+             xmlns:p="tapestry:parameter">
+
+    <div class="row blank_space logo-set ">
+        <div class="col-lg-5"><h3>Today's Latest Music Collections</h3></div>
+        <div class=" col-lg-offset-4 col-lg-3"><h3><a href="">Show all lessons</a></h3></div>
+    </div>
+    <div class="row blank_space logo-set ">
+    <div class="col-lg-3 small-images">
+        <div class="col-lg-3"><img src="images/images/18.png" alt="imusic" title="imusic" class="img-responsive"/></div>
+        <div class="col-lg-9">Lorum ipsum dummy text</div>
+        <img src="images/images/21.png" alt="imusic" title="imusic" class="img-responsive"/>
+        <img src="images/images/50.png" alt="imusic" title="imusic" class="img-responsive"/>
+    </div>
+    <div class="col-lg-3 small-images">
+        <div class="col-lg-3"><img src="images/images/18.png" alt="imusic" title="imusic" class="img-responsive"/></div>
+        <div class="col-lg-9">Lorum ipsum dummy text</div>
+        <img src="images/images/22.png" alt="imusic" title="imusic" class="img-responsive"/>
+        <img src="images/images/42.png" alt="imusic" title="imusic" class="img-responsive"/>
+
+    </div>
+    <div class="col-lg-3 small-images">
+        <div class="col-lg-3"><img src="images/images/18.png" alt="imusic" title="imusic" class="img-responsive"/></div>
+        <div class="col-lg-9">Lorum ipsum dummy text</div>
+        <img src="images/images/23.png" alt="imusic" title="imusic" class="img-responsive"/>
+        <img src="images/images/43.png" alt="imusic" title="imusic" class="img-responsive"/>
+
+    </div>
+    <div class="col-lg-3 small-images">
+        <div class="col-lg-3"><img src="images/images/18.png" alt="imusic" title="imusic" class="img-responsive"/></div>
+        <div class="col-lg-9">Lorum ipsum dummy text</div>
+        <img src="images/images/24.png" alt="imusic" title="imusic" class="img-responsive"/>
+        <img src="images/images/50.png" alt="imusic" title="imusic" class="img-responsive"/>
+    </div>
+    </div>
+    </t:container>
